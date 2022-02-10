@@ -9,16 +9,25 @@ body {
   background-color: $base-color;
 }
 
+#maximised {
+  height: 100%;
+}
+ 
 #app {
   height: 100vh;
   padding: 1em;
 }
 
-#prewiew-container, #editor-container, #editor {
+#prewiew-container, #editor-container, #editor, #maximised {
   background-color: $items-color;
 }
 
-#prewiew-container, #editor-container {
+#none {
+  display: none;
+}
+
+#prewiew-container, #editor-container, #maximised {
+  
   border: 1px black solid;
   display: flex;
   flex-direction: column;
