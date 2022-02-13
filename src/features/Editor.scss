@@ -1,9 +1,11 @@
 #editor-container {
     margin: 0 auto;
     margin-top: 2em;
-    width: 80%;
-    height: 35%;
+    width: 60%;
+    height: 15em;
     background-color: red;
+    min-height: 300px;
+    max-width: 690px;
 }
 
 #editor {
@@ -15,3 +17,4 @@
 #editor:focus-visible {
     outline: none;
 }
+

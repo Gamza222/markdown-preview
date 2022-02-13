@@ -3,12 +3,15 @@ import './Prewiew.scss';
 import ToolBar from './ToolBar.js';
 import { useSelector } from 'react-redux';
 import { changeMaximised } from '../assets/toolSlice.js';
+import {newPrewiewerText} from '../assets/editorSlice.js';
+import { marked } from "marked";
+
 
 function Prewiew() {
     const item = "prewiew-container";
     const maximisedValues = useSelector(changeMaximised);
     const maximised = () => {
-        console.log(maximisedValues)
+        
         if (maximisedValues.maximisedPrewiwer == true) {
             return 'maximised';
         } else if (
@@ -20,15 +23,15 @@ function Prewiew() {
             return 'none';
         }
     }
-    const handleChange = () => {
+    const text = useSelector(newPrewiewerText).text;
 
-    }
+    
 
     return (
             <div id={maximised()}>
             <ToolBar name="Prewiewer" value={item} />
             <div id="prewiew-main">
-            <p id="prewiew-main__text">aafsdfads</p>
+            <div id="prewiew-main__text" dangerouslySetInnerHTML={{__html: marked(text)}}/>
             </div>
             </div> 
     )

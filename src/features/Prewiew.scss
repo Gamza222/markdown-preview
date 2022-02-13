@@ -1,6 +1,56 @@
 #prewiew-container {
-    width: 90%;
+    width: 75%;
     height: 60%;
+    margin: 2em auto;
+    max-width: 900px;    
+    min-height: 530px;
+}
+
+#prewiew-main {
+    padding: 1em;
+    overflow-y: auto;
+}
+
+#prewiew-main img {
+    max-width: 100%;
+    display: block;
     margin: 0 auto;
-    margin-top: 2em;
+}
+
+#prewiew-main ul,ol {
+    margin-left: 2em;
+}
+#prewiew-main * {
+    margin-top: 1em;
+}
+
+#prewiew-main pre {
+    background-color: white;
+    padding: 0.6em;
+    overflow: auto;
+}
+
+#prewiew-main h1 {
+    border-bottom: 2px rgb(46, 42, 82) solid;
+}
+
+#prewiew-main th,td {
+    border: 1px black solid;
+    padding: 0.3em;
+}
+
+#prewiew-main code {
+    background-color: white;
+}
+
+
+@media screen and (max-width: 650px) {
+  
+    #prewiew-container {
+      width: 95%;
+    }
+    
+    #editor-container {
+      width: 85%;
+    }
 }

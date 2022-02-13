@@ -10,7 +10,6 @@ const toolSlice = createSlice({
   initialState,
   reducers: {
       maximiseValue: (state, action) => {   
-          console.log(action.payload);
           switch (action.payload) {
             case "editor-container": 
             return {
